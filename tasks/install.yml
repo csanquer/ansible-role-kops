@@ -1,6 +1,6 @@
 ---
 - name: get kops version # noqa 301
-  command: "kops version | cut -d ' ' -f 2"
+  shell: "kops version | cut -d ' ' -f 2"
   register: kops_result
   ignore_errors: yes
 
