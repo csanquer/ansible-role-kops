@@ -6,7 +6,7 @@
 
 - name: set kops current version fact
   set_fact:
-      kops_current_version: "{{ kops_result.stdout|default('') }}"
+      kops_current_version: "v{{ kops_result.stdout|default('') }}"
 
 - name: get latest stable kops tag
   uri:
@@ -17,7 +17,7 @@
 
 - name: set kops version fact to latest
   set_fact:
-       kops_version: "{{ kops_github_result.json.name|default(kops_default_version)|replace('v','') }}"
+       kops_version: "{{ kops_github_result.json.name|default(kops_default_version) }}"
   when: kops_version == 'latest'
 
 - name: set kops version fact to default

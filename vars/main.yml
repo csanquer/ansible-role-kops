@@ -3,4 +3,4 @@ kops_default_version: '1.10.0'
 
 kops_release_api_url: https://api.github.com/repos/kubernetes/kops/releases/latest
 
-kops_base_url: https://github.com/kubernetes/kops/releases/download/
+kops_base_url: https://github.com/kubernetes/kops/releases/download
